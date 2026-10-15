@@ -30,18 +30,6 @@ Evolução de pace em corridas.
 🖼️ Preview
 Adicione aqui um print do dashboard depois de rodar localmente.
 
-text
-
-+----------------------------------------------------------+
-|  🏃 Running Analytics                                    |
-|  ✅ Conectado como Seu Nome                              |
-|                                                          |
-|  [ Total: 42 ]  [ 380.5 km ]  [ 35.2 h ]  [ 4200 m ]     |
-|                                                          |
-|  📈 Distância por Atividade                              |
-|  ▁▂▃▅▇█▇▅▃▂▁▂▃▅▇█                                     |
-+----------------------------------------------------------+
-
 🚀 Começando
 Pré-requisitos
 Python 3.10+
@@ -98,23 +86,6 @@ O Streamlit abrirá automaticamente em http://localhost:8501.
 🔐 Como Funciona a Autenticação
 O app usa o Authorization Code Flow do OAuth 2.0:
 
-text
-┌──────────┐        ┌──────────┐        ┌────────────┐
-│ Usuário  │───────▶│ Streamlit│───────▶│   Strava   │
-│          │        │   App    │        │  OAuth 2.0 │
-└──────────┘        └──────────┘        └────────────┘
-     │                    │                    │
-     │  1. Clica          │  2. Redireciona    │
-     │  "Conectar"        │  para /authorize   │
-     │                    │                    │
-     │  3. Autoriza       │◀───────────────────│
-     │                    │  4. Callback ?code │
-     │                    │                    │
-     │                    │  5. POST /token    │
-     │                    │  (code → tokens)   │
-     │                    │                    │
-     │  6. Dashboard      │  7. GET /activities│
-     │  carregado         │────────────────────│
 Tokens armazenados apenas em st.session_state (memória), nunca em disco.
 
 Renovação automática quando o access_token expira (a cada 6h).
