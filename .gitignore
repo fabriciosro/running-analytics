@@ -7,6 +7,19 @@
 credentials.json
 token.json
 
+# ===== Ferramentas de IA / Agentes =====
+.claude/
+.agents/
+.cursor/
+.cursorrules
+.aider*
+.continue/
+.cline/
+.codex/
+.windsurf/
+.zed/
+*.prompt
+
 # ===== Python =====
 __pycache__/
 *.py[cod]
