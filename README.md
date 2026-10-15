@@ -31,15 +31,17 @@ Evolução de pace em corridas.
 Adicione aqui um print do dashboard depois de rodar localmente.
 
 text
+
 +----------------------------------------------------------+
-|  🏃 Running Analytics                                     |
-|  ✅ Conectado como Seu Nome                               |
+|  🏃 Running Analytics                                    |
+|  ✅ Conectado como Seu Nome                              |
 |                                                          |
 |  [ Total: 42 ]  [ 380.5 km ]  [ 35.2 h ]  [ 4200 m ]     |
 |                                                          |
-|  📈 Distância por Atividade                               |
-|  ▁▂▃▅▇█▇▅▃▂▁▂▃▅▇█                                         |
+|  📈 Distância por Atividade                              |
+|  ▁▂▃▅▇█▇▅▃▂▁▂▃▅▇█                                     |
 +----------------------------------------------------------+
+
 🚀 Começando
 Pré-requisitos
 Python 3.10+
