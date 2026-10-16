@@ -28,7 +28,8 @@ Evolução de pace em corridas.
 🎛️ Filtros dinâmicos por tipo de esporte e intervalo de datas.
 
 🖼️ Preview
-Adicione aqui um print do dashboard depois de rodar localmente.
+<img width="1446" height="844" alt="image" src="https://github.com/user-attachments/assets/7e8a936a-77d4-4691-b11e-c846cc71f374" />
+
 
 🚀 Começando
 Pré-requisitos
@@ -91,18 +92,7 @@ Tokens armazenados apenas em st.session_state (memória), nunca em disco.
 Renovação automática quando o access_token expira (a cada 6h).
 
 Escopo utilizado: activity:read_all.
-
-📁 Estrutura do Projeto
-text
-running-analytics/
-├── app.py                          # Aplicação principal
-├── requirements.txt                # Dependências Python
-├── README.md                       # Este arquivo
-├── LICENSE                         # Licença
-├── .gitignore                      # Arquivos ignorados pelo Git
-└── .streamlit/
-    ├── config.toml                 # Configuração visual do Streamlit                 
-    └── secrets.toml.example        
+     
 	
 🛠️ Tecnologias Utilizadas
 Tecnologia	Uso
