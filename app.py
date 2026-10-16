@@ -1,3 +1,4 @@
+"""Running Analytics — ponto de entrada do Streamlit."""
 import streamlit as st
 
 from src.config import (
@@ -84,17 +85,20 @@ if st.sidebar.button("🚪 Desconectar"):
 
 
 # ============================================================
-# BUSCAR E TRATAR DADOS
+# BUSCAR E TRATAR DADOS (últimos 3 meses)
 # ============================================================
-with st.spinner("Carregando atividades do Strava..."):
+with st.spinner("Carregando atividades dos últimos 3 meses..."):
     try:
-        df = fetch_activities_dataframe(st.session_state["access_token"])
+        df = fetch_activities_dataframe(
+            st.session_state["access_token"],
+            months=3,
+        )
     except Exception as exc:
         st.error(f"Erro ao buscar atividades: {exc}")
         st.stop()
 
 if df.empty:
-    st.warning("Nenhuma atividade encontrada na sua conta.")
+    st.warning("Nenhuma atividade encontrada nos últimos 3 meses.")
     st.stop()
 
 

@@ -41,11 +41,22 @@ class StravaClient:
         response.raise_for_status()
         return response.json()
 
-    def get_all_activities(self, max_pages: int = MAX_PAGES) -> list[dict[str, Any]]:
-        """Busca todas as atividades com paginação automática."""
+    def get_all_activities(
+        self,
+        max_pages: int = MAX_PAGES,
+        after: int | None = None,
+    ) -> list[dict[str, Any]]:
+        """
+        Busca todas as atividades com paginação automática.
+
+        Args:
+            max_pages: número máximo de páginas.
+            after: timestamp Unix (epoch) — retorna apenas atividades
+                   iniciadas depois dessa data.
+        """
         activities: list[dict[str, Any]] = []
         for page in range(1, max_pages + 1):
-            batch = self.get_activities(page=page, per_page=PER_PAGE)
+            batch = self.get_activities(page=page, per_page=PER_PAGE, after=after)
             if not batch:
                 break
             activities.extend(batch)
